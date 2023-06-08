@@ -1,18 +1,16 @@
-package Models;
-
-import com.fasterxml.jackson.annotation.*;
-import java.util.*;
 import java.io.Serializable;
+import java.util.Random;
 
-class Persona implements Serializable {
+public class Persona {
     private String nombre;
     private String apellido;
     private int edad;
     private String barrio;
     private String dni;
     private String ocupacion;
+    private int kitNum;
 
-    public Persona() {
+    public Persona(String nombre, String apellido, int edad, String barrio, String dni, String ocupacion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -20,6 +18,7 @@ class Persona implements Serializable {
         this.dni = dni;
         this.ocupacion = ocupacion;
     }
+
 
     public String getNombre() {
         return nombre;
@@ -57,6 +56,7 @@ class Persona implements Serializable {
         return dni;
     }
 
+
     public void setDni(String dni) {
         this.dni = dni;
     }
@@ -69,6 +69,14 @@ class Persona implements Serializable {
         this.ocupacion = ocupacion;
     }
 
+    public int getKitNum() {
+        return kitNum;
+    }
+
+    public void setKitNum(int kitNum) {
+        this.kitNum = kitNum;
+    }
+
     @Override
     public String toString() {
         return "Persona{" +
@@ -78,6 +86,7 @@ class Persona implements Serializable {
                 ", barrio='" + barrio + '\'' +
                 ", dni='" + dni + '\'' +
                 ", ocupacion='" + ocupacion + '\'' +
+                ", kitNum=" + kitNum +
                 '}';
     }
 }
